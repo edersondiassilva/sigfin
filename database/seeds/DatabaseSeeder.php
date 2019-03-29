@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('news')->insert([
+            'title' => str_random(20),
+        ]);
     }
 }

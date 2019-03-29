@@ -11,25 +11,16 @@
 |
 */
 
+Route::group(array('prefix' => 'api'), function()
+{
 
-Route::get('/', 'HomeController@index');
-Auth::routes();
+  Route::get('/', function () {
+      return response()->json(['message' => 'News API', 'status' => 'Connected']);;
+  });
 
-Route::get('/home', 'HomeController@index')->name('home');
+  Route::resource('news', 'NewsController');
+});
 
-Route::get('/accounts', 'AccountController@index');
-Route::get('/accounts/create', 'AccountController@create');
-Route::post('/accounts/store', 'AccountController@store');
-Route::get('/accounts/edit/{id}','AccountController@edit')->where('id', '[0-9]+');
-Route::post('/accounts/update', 'AccountController@update');
-
-Route::get('/transactions', 'TransactionController@index');
-Route::get('/transactions/create', 'TransactionController@create');
-Route::post('/transactions/store', 'TransactionController@store');
-Route::get('/transactions/edit/{id}','TransactionController@edit')->where('id', '[0-9]+');
-Route::post('/transactions/update', 'TransactionController@update');
-
-Route::get('/transactions/extract', 'TransactionController@formextract');
-Route::post('/transactions/getextract', 'TransactionController@getextract');
-Route::get('/transactions/showextract', 'TransactionController@showextract');
-Route::get('/transactions/showextract/{filter}','TransactionController@showextract')->where('filter', '[0-9]+');
+Route::get('/', function () {
+    return redirect('api');
+});

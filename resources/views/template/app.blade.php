@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ config('app.name', 'SGF') }}</title>
+  <title>{{ config('app.name', 'SGA') }}</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
@@ -23,9 +23,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini">SGF</span>
+      <span class="logo-mini">SGA</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SGF</span>
+      <span class="logo-lg"><b>SGA</span>
     </a>
 
     <!-- Header Navbar -->
@@ -76,13 +76,7 @@
     <section class="sidebar">
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li class="header">CADASTROS</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li><a href="/accounts"><i class="fa fa-key"></i> <span>Contas</span></a></li>
-        <li><a href="/transactions"><i class="fa fa-credit-card"></i> <span>Transações</span></a></li>
-        <li class="header">RELATÓRIOS</li>
-        <li><a href="/transactions/extract"><i class="fa fa-credit-card"></i> <span>Extrato</span></a></li>
+        <li><a href="/home"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -100,7 +94,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <div align="center">&copy;HotMilhas</div>
+    <div align="center">&copy;Ânima</div>
   </footer>
   
   <!-- Add the sidebar's background. This div must be placed
@@ -114,15 +108,6 @@
 <script src="/bower_components/admin-lte/dist/js/adminlte.min.js"></script>
 <script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="{{ asset('/js/jquery.mask.min.js') }}"></script>
-
-<script>
-  $(document).ready(function(){
-      // Máscaras
-      $('.date').mask('00/00/0000');
-      $('.money').mask('###0.00', {reverse: true});
-  });
-</script>
 
 </body>
 </html>

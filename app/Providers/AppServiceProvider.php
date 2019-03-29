@@ -24,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         \Carbon\Carbon::setLocale('pt_BR');
+        \Carbon\Carbon::setToStringFormat('d/m/Y H:i:s');
     }
 }
